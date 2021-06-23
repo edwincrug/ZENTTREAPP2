@@ -1,0 +1,94 @@
+.searchAddress {
+    position: absolute;
+}
+#map {
+    height: 350px !important;
+}
+#autocomplete {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 99%;
+}
+#btnSearch {
+    margin-right: 11% !important;
+}
+#btnPosition {
+    margin-right: -3% !important;
+}
+.fechaInput {
+    text-align: right;
+}
+.iconItemLeft {
+    font-size: 24px !important;
+    margin-right: 10px !important;
+}
+.itemTextLabel {
+    display: inline-block !important;
+}
+.itemText {
+    display: inline-block !important;
+    white-space: pre-wrap;
+    font-size: 14px;
+    vertical-align: middle;
+    margin-bottom: -18px;
+    margin-right: -88px;
+    width: 70%;
+    font-weight: 200;
+    color: black;
+}
+#title {
+    font-size: 22px;
+    text-align: center;
+}
+.hastaLabel {
+    position: absolute;
+    width: 100%;
+}
+.hastaItem {
+    height: 100px;
+}
+.hastaLevel2 {
+    margin-bottom: -40px !important;
+}
+.txtSearch {
+    margin-left: 9px !important;
+    margin-right: 8px !important;
+}
+.iconDistancia {
+    display: inline-block;
+    width: 50%;
+    text-align: right;
+    color: gray;
+    font-size: 22px;
+}
+.distanciaLabel {
+    display: inline-block;
+    width: 25%;
+    text-align: right;
+}
+.distanciaText {
+    display: inline-block;
+    width: 22%;
+    text-align: right;
+    font-size: 18px;
+    font-weight: 500;
+}
+.linea {
+    border-bottom: 1px solid gray;
+    float: right;
+    width: 79%;
+    margin-top: 4px;
+}
+.totalText {
+    display: inline-block;
+    width: 22%;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 11px;
+}
+.addressResult {
+    white-space: normal !important;
+    font-size: 15px !important;
+}

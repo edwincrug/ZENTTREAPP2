@@ -1,0 +1,764 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"res",
+				"response"
+			],
+			[
+				"reser",
+				"reservationRepository"
+			],
+			[
+				"ma",
+				"margin-left"
+			],
+			[
+				"mes",
+				"messagingRepository"
+			],
+			[
+				"$roo",
+				"$rootScope\tAngularJS"
+			],
+			[
+				"fon",
+				"font-size"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "www/css/ionic.app.css",
+			"settings":
+			{
+				"buffer_size": 247314,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/templates/map.html",
+			"settings":
+			{
+				"buffer_size": 7300,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/AngularJS/Factories/backgroundFactory.js",
+			"settings":
+			{
+				"buffer_size": 449,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/AngularJS/Controllers/Shipment/mapController.js",
+			"settings":
+			{
+				"buffer_size": 14412,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/index.html",
+			"settings":
+			{
+				"buffer_size": 7175,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/AngularJS/Controllers/Mail/mailController.js",
+			"settings":
+			{
+				"buffer_size": 2084,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "platforms/ios/cordova/build.xcconfig",
+			"settings":
+			{
+				"buffer_size": 1990,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/AngularJS/Controllers/Menu/menuController.js",
+			"settings":
+			{
+				"buffer_size": 6448,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config.xml",
+			"settings":
+			{
+				"buffer_size": 6237,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/AngularJS/Controllers/Contact/contactRepository.js",
+			"settings":
+			{
+				"buffer_size": 558,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/templates/login.html",
+			"settings":
+			{
+				"buffer_size": 2104,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 47.0,
+		"last_filter": "json",
+		"selected_items":
+		[
+			[
+				"json",
+				"Set Syntax: JSON"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"sett",
+				"Snippet: setTimeout function"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"timeo",
+				"Snippet: setTimeout function"
+			],
+			[
+				"snipp",
+				"Snippet: Prototype"
+			],
+			[
+				"Snippet: st",
+				"Snippet: setTimeout function"
+			],
+			[
+				"htmppret",
+				"HTMLPrettify: Set Prettify Preferences"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 174.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"h"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/edwin/Documents/Ionic/zenttreAPP",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Contact",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Login",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Mail",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Menu",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Messaging",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Shipment",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/DBO",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Factories",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/js"
+	],
+	"file_history":
+	[
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/app.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/node_modules/@ionic/cloud/dist/bundle/ionic.cloud.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Billing/billingController.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/config.xml",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/templates/facturacion.html",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/templates/miCuenta.html",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/routes.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Menu/menuController.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Entity/Consumos.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/css/reservar.css",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Reservation/reservationActionController.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Reservation/reservationNewController.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/platforms/ios/www/AngularJS/Controllers/Reservation/reservationNewController.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Reservation/reservationController.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/templates/reservaciones.html",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/templates/buzonDetalle.html",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/css/detail.css",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/index.html",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/css/global.css",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/css/ionic.app.css",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/templates/tabsController.html",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Reservation/reservationRepository.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Shipment/mapController.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/templates/map.html",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/templates/reservacionesAccion.html",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/templates/enviosHistorico.html",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/templates/correspondenciaHistorico.html",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/templates/envios.html",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/templates/consultas.html",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/templates/reservar.html",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/templates/reservacionesHistorico.html",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/sass/cleareable.scss",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Shipment/shipmentController.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Messaging/messagingController.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Messaging/messagingDetailController.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/templates/correspondencia.html",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Messaging/messsagingRepository.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Mail/mailController.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Factories/configurationFactory.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Mail/mailRepository.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/AngularJS/Controllers/Mail/mailDetailController.js",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/css/mail.css",
+		"/Users/edwin/Documents/Ionic/zenttreAPP/www/templates/buzon.html",
+		"/Users/edwin/Documents/Codekit/zenttrePortal/app/static/Templates/home.html",
+		"/Users/edwin/Documents/Codekit/zenttrePortal/app/static/css/bootstrap.css",
+		"/Users/edwin/Documents/Codekit/zenttrePortal/app/static/index.html",
+		"/Users/edwin/Documents/Codekit/zenttrePortal/app/static/Templates/reservacion.html",
+		"/Users/edwin/Documents/Codekit/zenttrePortal/app/static/AngularJS/Controllers/Reservation/reservationNewController.js",
+		"/Users/edwin/Documents/Codekit/zenttrePortal/app/static/Templates/reservacionnueva.html",
+		"/Users/edwin/Documents/Codekit/zenttrePortal/app/static/sass/reservation.scss",
+		"/Users/edwin/Documents/Codekit/zenttrePortal/app/static/sass/index.scss",
+		"/Users/edwin/Library/Application Support/Sublime Text 3/Packages/Snippets/Javascript/setTimeout",
+		"/Users/edwin/Library/Application Support/Sublime Text 3/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"alertAddress",
+			"model.alertTitle",
+			"26ADE4",
+			"energi",
+			"consumeRepository",
+			"AjustaFechaMen",
+			"extensionvalue",
+			"SetHoraInicio",
+			"no se ",
+			"padding",
+			"setsub",
+			"$scope.model.currentRoom",
+			"setsubt",
+			"mobi",
+			"nesspre",
+			"nexpre",
+			"capuchinoCant",
+			"americanoCant",
+			"SetHoraInicio",
+			"$scope.model.inicio",
+			"fonts",
+			"font",
+			"fonts",
+			"glyphhicons",
+			"glyph",
+			"datata",
+			"format_on_save"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"85d0ef"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "www/css/ionic.app.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 247314,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								965,
+								965
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 90.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "www/templates/map.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7300,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6300,
+								6300
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2650.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "www/AngularJS/Factories/backgroundFactory.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 449,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								358,
+								366
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "www/AngularJS/Controllers/Shipment/mapController.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 14412,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								530,
+								530
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "www/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7175,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								380,
+								528
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "www/AngularJS/Controllers/Mail/mailController.js",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2084,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								920,
+								959
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 251.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "platforms/ios/cordova/build.xcconfig",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1990,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 332.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "www/AngularJS/Controllers/Menu/menuController.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6448,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6062,
+								6152
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 60.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "config.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6237,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6040,
+								6040
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1718.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "www/AngularJS/Controllers/Contact/contactRepository.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 558,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "www/templates/login.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2104,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								798,
+								798
+							]
+						],
+						"settings":
+						{
+							"color_scheme": "Packages/User/Color Highlighter/themes/Monokai.tmTheme",
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 57.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "zenttreAPP.sublime-project",
+	"replace":
+	{
+		"height": 70.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 245.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

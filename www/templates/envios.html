@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="css/detail.css">
+<ion-view title="envíos" id="page9" class=" ">
+    <ion-content padding="false" class="has-header">
+        <ion-refresher pulling-text="arrastre para actualizar..." on-refresh="doRefresh()"></ion-refresher>
+       <!--  <ion-list class=" ">
+            <ion-item class="item-divider ">en curso</ion-item>
+            <ion-item class="item-icon-left item-icon-right energized  " ng-click="DetalleEnvio(paquete,2)" ng-repeat="paquete in model.enviosEnCurso | filter: search">
+                <i class="icon ion-android-bicycle"></i>entrega de invitación a cliente
+                <span class="item-note">23/12/16 12:30</span>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list> -->
+        <a ui-sref="searchaddress" style="font-weight:500;border-radius:-3px -3px -3px -3px;" class=" button button-energized  button-full  icon-right ion-android-alarm-clock ">nuevo envio</a>
+        <ion-list class=" ">
+            <ion-item class="item-divider ">programados</ion-item>
+            <ion-item class="item-icon-left item-icon-right energized" ng-class="{ 'inprogress':  envio.etapa == 2 }" ng-click="DetalleEnvio(envio,1)" ng-repeat="envio in model.envios | filter: search">
+                <i class="icon ion-android-bicycle"></i> {{ envio.material }}
+                <span class="item-note"> {{ envio.fechaEnvio + ' a las ' + envio.horaEnvio }} </span>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

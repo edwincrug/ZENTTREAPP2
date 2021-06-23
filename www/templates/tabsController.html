@@ -1,0 +1,16 @@
+<ion-view title="inicio">
+    <ion-tabs class="tabs-calm tabs-icon-only" ng-class="{'tabs-item-hide': $root.hideTabs}">
+        <ion-tab title="reservaciones" icon="ion-calendar" ng-click="Inicio()" badge="model.badgeReservation" badge-style="badge-assertive">
+            <ion-nav-view name="tab1"></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="buzón" icon="ion-android-mail" ng-click="Buzon()"  badge="model.badgeMail" badge-style="badge-assertive" class=" ">
+            <ion-nav-view name="tab6"></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="correspondencia" icon="ion-android-document" ng-click="Correspondencia()" badge="model.badgeAlmacen" badge-style="badge-assertive" class=" ">
+            <ion-nav-view name="tab2"></ion-nav-view>
+        </ion-tab>
+        <ion-tab title="envíos" icon="ion-android-bicycle" ng-click="Envios()" badge="model.badgeEnvios" badge-style="badge-assertive" class=" ">
+            <ion-nav-view name="tab3"></ion-nav-view>
+        </ion-tab>
+    </ion-tabs>
+</ion-view>

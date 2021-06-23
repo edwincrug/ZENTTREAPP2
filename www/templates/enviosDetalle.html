@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="css/detail.css">
+<link rel="stylesheet" href="css/map.css">
+<ion-view title="detalle" class=" ">
+    <ion-content padding="false" class="has-header">
+        <div class="list card manual-card-fullwidth ">
+            <ion-item class="item-icon-left energized ">
+                <i class="icon ion-ios-box"></i> {{ model.envio.material }} </ion-item>
+            <div class="item item-body ">
+                <p style="margin-top:0px;color:#000000;" class=" ">
+                    {{ model.envio.lugar}}
+                </p>
+            </div>
+            <div class="spacer" style="width: 320px; height: 5px;"></div>
+            <form class="list ">
+                <label class="item item-input ">
+                    <span class="input-label">notificación</span>
+                    <div class="detailText">{{ model.envio.fechaRecibida + ' ' + model.envio.horaNotificacion }}</div>
+                </label>
+                <label class="item item-input ">
+                    <span class="input-label">remitente</span>
+                    <div class="detailText">{{ model.envio.remitente}}</div>
+                </label>
+                <label class="item item-input ">
+                    <span class="input-label">destinatario</span>
+                    <div class="detailText">{{ model.envio.destinatario}}</div>
+                </label>
+                <label class="item item-input ">
+                    <span class="input-label">tipo</span>
+                    <div class="detailText">{{ model.envio.tipo }}</div>
+                </label>
+                <label class="item item-input ">
+                    <span class="input-label">token de entrega</span>
+                    <div class="detailText token">{{ model.envio.idEnvio }}</div>
+                </label>
+            </form>
+            <div class="mapContainer" ng-hide="model.envio.etapa != 2">
+                <div id="map" data-tap-disabled="true"></div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

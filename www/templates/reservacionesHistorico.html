@@ -1,0 +1,18 @@
+<ion-view title="detalle" class=" ">
+    <ion-content padding="false" class="has-header">
+        <div class="list card manual-card-fullwidth">
+            <ion-item class="item-icon-left energized  ">
+                <i class="icon ion-calendar"></i>{{ model.reservation.sucursal + ' | ' + model.reservation.sala }}</ion-item>
+            <form class="list ">
+                <label class="item item-input item-stacked-label ">
+                    <span class="input-label">fecha</span>
+                    <p class="detailText">{{ model.reservation.fecha}} {{ ' ' + model.reservation.desde + ' a ' + model.reservation.hasta }}</p>
+                </label>
+                <label class="item item-input " id="reservacionesDetalle-input13">
+                    <span class="input-label">tiempo utilizado</span>
+                    <p class="detailText">{{ model.reservation.horas + ' hora(s).' }}</p>
+                </label>
+            </form>
+        </div>
+    </ion-content>
+</ion-view>

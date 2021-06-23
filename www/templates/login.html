@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="css/cleareable.css">
+<ion-view title="inicio" hide-nav-bar="true" hide-back-button="true" style="background-color:#000000;" class=" ">
+    <ion-content padding="true" class=" manual-remove-top-padding">
+        <div class="spacer" style="width: 285px; height: 117px;"></div>
+        <div class="" style="margin-left: -10px; width: calc(100% + 20px);">
+            <img src="img/cgeZLPjKTOmw9sl9BZjb_logoTrans.png" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+        </div>
+        <form class="list ">
+            <div class="spacer" style="width: 285px; height: 70px;"></div>
+            <ion-list class=" list-inset">
+                <label class="item item-input item item-input">
+                    <input type="email" placeholder="correo electrónico" ng-model="usuario.mail" required class="search-box1">
+                    <button class="close-icon1" type="reset"></button>
+                </label>
+                <label class="item item-input ">
+                    <input type="password" placeholder="clave acceso" ng-model="usuario.clave" required class="search-box2">
+                    <button class="close-icon2" type="reset"></button>
+                </label>
+            </ion-list>
+            <div class="spacer" style="width: 285px; height: 45px;"></div>
+            <a style="font-weight:500;color:#FFFFFF;border-radius:0px 0px 0px 0px;" class=" button button-light  button-block button-outline icon-right ion-arrow-right-c " ng-click="Login();">acceder</a>
+            <div class="spacer" style="width: 285px; height: 45px;"></div>
+            <a ui-sref="contacto" id="login-button2" style="font-weight:500;" class=" button button-light  button-block button-clear ">¿informes o contratación?</a>
+        </form>
+    </ion-content>
+</ion-view>
+
+<div ng-model="mywidget" mobiscroll-widget="settingsAlert" mobiscroll-instance="alertAccess" style="display: none;">
+    <div class="md-body">
+        <h3>error de acceso</h3>
+        <p>ha introducido un usuario y/o password incorrecto.</p>
+    </div>
+</div>

@@ -1,0 +1,344 @@
+<link rel="stylesheet" href="css/detail.css">
+<ion-view title="reservar" class=" " hide-tabs='true'>
+    <ion-content padding="false" class="has-header" overflow-scroll="true">
+        <label class="item item-text" id="title">
+            nueva reservación
+        </label>
+        <form class="list ">
+            <label class="item item-select">
+                <span class="input-label "><span class="icon-left ion-location iconItemLeft"></span>selecciona sucursal</span>
+                <select ng-model="selSucursal" ng-change="SetSucursal(selSucursal)">
+                    <option>del valle 1</option>
+                    <option>del valle 2</option>
+                    
+                </select>
+            </label>
+            <div class=" button-bar " ng-hide="!model.active">
+                <button id="reservar-button7" class=" button button-energized  button-block icon-left ion-monitor " ng-click="SetType(1)" ng-class="{'button-outline': model.roomType == 2 }">salas</button>
+                <button id="reservar-button8" class=" button button-energized  button-block icon-right ion-laptop " ng-click="SetType(2)" ng-class="{'button-outline': model.roomType == 1}">oficinas</button>
+            </div>
+            <div class=" button-bar " ng-hide="!model.active">
+                <button class=" button button-energized  button-block " ng-repeat="room in model.rooms" ng-click="SetRoom(room)" ng-class="{'button-outline': !room.selected }">{{ room.title.replace('Sala ', '').replace('Oficina ', '') }}</button>
+            </div>
+            <label class="item item-input " ng-hide="model.currentRoom == null">
+                <span class="input-label entradaInput">{{ model.currentRoom.title }}</span>
+            </label>
+            <div class="" ng-hide="!model.active">
+                <img src="{{ model.currentRoom.photo }}" width="100%" height="auto" style="display: block; margin-left: auto; margin-right: auto;">
+            </div>
+            <label class="item item-input " ng-hide="!model.active">
+                <span class="input-label"><span class="icon-left ion-calendar iconItemLeft"></span>fecha</span>
+                <input type="text" class="fechaInput entradaInput" ng-model="model.inicio" mobiscroll-calendar="settingsFecha" ng-change="SetFecha()" />
+            </label>
+            <label class="item item-select" ng-hide="!model.active">
+                <span class="input-label"><span class="icon-left ion-ios-alarm-outline iconItemLeft"></span>entrada</span>
+                <select ng-model="selInicio" ng-change="SetHoraInicio(selInicio)" class="entradaInput">
+                    <option>06:00</option>
+                    <option>06:30</option>
+                    <option>07:00</option>
+                    <option>07:30</option>
+                    <option>08:00</option>
+                    <option>08:30</option>
+                    <option>09:00</option>
+                    <option>09:30</option>
+                    <option>10:00</option>
+                    <option>10:30</option>
+                    <option>11:00</option>
+                    <option>11:30</option>
+                    <option>12:00</option>
+                    <option>12:30</option>
+                    <option>13:00</option>
+                    <option>13:30</option>
+                    <option>14:00</option>
+                    <option>14:30</option>
+                    <option>15:00</option>
+                    <option>15:30</option>
+                    <option>16:00</option>
+                    <option>16:30</option>
+                    <option>17:00</option>
+                    <option>17:30</option>
+                    <option>18:00</option>
+                    <option>18:30</option>
+                    <option>19:00</option>
+                    <option>19:30</option>
+                    <option>20:00</option>
+                    <option>20:30</option>
+                    <option>21:00</option>
+                    <option>21:30</option>
+                    <option>22:00</option>
+                    <option>22:30</option>
+                    <option>23:00</option>
+                    <option>23:30</option>
+                </select>
+            </label>
+            <label class="item item-input sliderAdjust" ng-hide="!model.active">
+                <input type="range" value="0.5" min="0.5" max="8" step="0.5" data-icon='{ "left": "material-chevron-left", "right": "material-chevron-right" }' data-val="left" data-template="{value} hrs. " ng-model="hours" mobiscroll-slider="settingsSlider" ng-change="drag(hours)" data-step-labels="[1, 2, 3, 4,5,6,7,8]" />
+            </label>
+            <label class="item item-input " ng-hide="!model.active">
+                <span class="input-label"><span class="icon-left ion-ios-alarm-outline iconItemLeft"></span>salida</span>
+                <label class="salidaInput">{{ model.fin | date:'HH:mm' }}</label>
+            </label>
+            <div ng-hide="!model.allowConsumos">
+                <button class="button button-energized  button-block icon-right ion-fork" ng-click="model.consumos = !model.consumos" ng-hide="!model.active">agregar consumos</button>
+            <div class="list" ng-hide="!model.consumos">
+                <div class="item item-icon-left item-toggle item-select">
+                    <i class="icon mbsc-ic mbsc-ic-material-chevron-right"></i> coffee break
+                    <span class="mbsc-desc"> café americano y complementos</span>
+                    <label class="toggle toggle-positive">
+                        <input type="checkbox" ng-model="coffee" ng-change="model.coffee = coffee; SetConsumo();">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </div>
+                <div class="item item-input item-select" ng-hide="!model.coffee">
+                    <div class="input-label">
+                        personas
+                    </div>
+                    <select ng-model="model.coffeeCant" ng-change="SetConsumo()">
+                        <option ng-selected="model.coffeeCant == 1" ng-value="1">1</option>
+                        <option ng-selected="model.coffeeCant == 2" ng-value="2">2</option>
+                        <option ng-selected="model.coffeeCant == 6" ng-value="6">6</option>
+                        <option ng-selected="model.coffeeCant == 12" ng-value="12">12</option>
+                    </select>
+                </div>
+                <div class="item item-input item-select" ng-hide="!model.coffee">
+                    <div class="input-label">
+                        galletas
+                    </div>
+                    <select ng-model="model.coffeeGalletas" ng-change="SetConsumo()">
+                        <option ng-selected="model.coffeeGalletas == 'true'" ng-value="true">si</option>
+                        <option ng-selected="model.coffeeGalletas == 'false'" ng-value="false">no</option>
+                    </select>
+                </div>
+                <label class="item item-icon-left item-toggle item-select">
+                    <i class="icon mbsc-ic mbsc-ic-material-chevron-right"></i>café americano
+                    <span class="mbsc-desc">envase de 355 ml.</span>
+                    <label class="toggle toggle-positive">
+                        <input type="checkbox" ng-model="americano" ng-change="model.americano = americano; SetConsumo();">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </label>
+                <label class="item item-input item-select" ng-hide="!model.americano">
+                    <div class="input-label">
+                        cantidad
+                    </div>
+                    <select ng-model="model.americanoCant" ng-change="SetConsumo()">
+                        <option ng-selected="model.americanoCant == 1" ng-value="1">1</option>
+                        <option ng-selected="model.americanoCant == 2" ng-value="2">2</option>
+                        <option ng-selected="model.americanoCant == 3" ng-value="3">3</option>
+                        <option ng-selected="model.americanoCant == 4" ng-value="4">4</option>
+                        <option ng-selected="model.americanoCant == 5" ng-value="5">5</option>
+                        <option ng-selected="model.americanoCant == 6" ng-value="6">6</option>
+                        <option ng-selected="model.americanoCant == 7" ng-value="7">7</option>
+                        <option ng-selected="model.americanoCant == 8" ng-value="8">8</option>
+                        <option ng-selected="model.americanoCant == 9" ng-value="9">9</option>
+                        <option ng-selected="model.americanoCant == 10" ng-value="10">10</option>
+                        <option ng-selected="model.americanoCant == 11" ng-value="11">11</option>
+                        <option ng-selected="model.americanoCant == 12" ng-value="12">12</option>
+                    </select>
+                </label>
+                <label class="item item-icon-left item-toggle item-select">
+                    <i class="icon mbsc-ic mbsc-ic-material-chevron-right"></i>café capuchino
+                    <span class="mbsc-desc">envase de 355 ml.</span>
+                    <label class="toggle toggle-positive">
+                        <input type="checkbox" ng-model="capuchino" ng-change="model.capuchino = capuchino; SetConsumo();">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </label>
+                <label class="item item-input item-select" ng-hide="!model.capuchino">
+                    <div class="input-label">
+                        cantidad
+                    </div>
+                    <select ng-model="model.capuchinoCant" ng-change="SetConsumo()">
+                        <option ng-selected="model.capuchinoCant == 1" ng-value="1">1</option>
+                        <option ng-selected="model.capuchinoCant == 2" ng-value="2">2</option>
+                        <option ng-selected="model.capuchinoCant == 3" ng-value="3">3</option>
+                        <option ng-selected="model.capuchinoCant == 4" ng-value="4">4</option>
+                        <option ng-selected="model.capuchinoCant == 5" ng-value="5">5</option>
+                        <option ng-selected="model.capuchinoCant == 6" ng-value="6">6</option>
+                        <option ng-selected="model.capuchinoCant == 7" ng-value="7">7</option>
+                        <option ng-selected="model.capuchinoCant == 8" ng-value="8">8</option>
+                        <option ng-selected="model.capuchinoCant == 9" ng-value="9">9</option>
+                        <option ng-selected="model.capuchinoCant == 10" ng-value="10">10</option>
+                        <option ng-selected="model.capuchinoCant == 11" ng-value="11">11</option>
+                        <option ng-selected="model.capuchinoCant == 12" ng-value="12">12</option>
+                    </select>
+                </label>
+                <label class="item item-icon-left item-toggle item-select">
+                    <i class="icon mbsc-ic mbsc-ic-material-chevron-right"></i>nespresso
+                    <span class="mbsc-desc">envase de 355 ml.</span>
+                    <label class="toggle toggle-positive">
+                        <input type="checkbox" ng-model="nespresso" ng-change="model.nespresso = nespresso; SetConsumo();">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </label>
+                <label class="item item-input item-select" ng-hide="!model.nespresso">
+                    <div class="input-label">
+                        cantidad
+                    </div>
+                    <select ng-model="model.nespressoCant" ng-change="SetConsumo()">
+                        <option ng-selected="model.nespressoCant == 1" ng-value="1">1</option>
+                        <option ng-selected="model.nespressoCant == 2" ng-value="2">2</option>
+                        <option ng-selected="model.nespressoCant == 3" ng-value="3">3</option>
+                        <option ng-selected="model.nespressoCant == 4" ng-value="4">4</option>
+                        <option ng-selected="model.nespressoCant == 5" ng-value="5">5</option>
+                        <option ng-selected="model.nespressoCant == 6" ng-value="6">6</option>
+                        <option ng-selected="model.nespressoCant == 7" ng-value="7">7</option>
+                        <option ng-selected="model.nespressoCant == 8" ng-value="8">8</option>
+                        <option ng-selected="model.nespressoCant == 9" ng-value="9">9</option>
+                        <option ng-selected="model.nespressoCant == 10" ng-value="10">10</option>
+                        <option ng-selected="model.nespressoCant == 11" ng-value="11">11</option>
+                        <option ng-selected="model.nespressoCant == 12" ng-value="12">12</option>
+                    </select>
+                </label>
+                <label class="item item-icon-left item-toggle item-select">
+                    <i class="icon mbsc-ic mbsc-ic-material-chevron-right"></i>té
+                    <span class="mbsc-desc">envase de 355 ml.</span>
+                    <label class="toggle toggle-positive">
+                        <input type="checkbox" ng-model="te" ng-change="model.te = te; SetConsumo();">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </label>
+                <label class="item item-input item-select" ng-hide="!model.te">
+                    <div class="input-label">
+                        cantidad
+                    </div>
+                    <select ng-model="model.teCant" ng-change="SetConsumo()">
+                        <option ng-selected="model.teCant == 1" ng-value="1">1</option>
+                        <option ng-selected="model.teCant == 2" ng-value="2">2</option>
+                        <option ng-selected="model.teCant == 3" ng-value="3">3</option>
+                        <option ng-selected="model.teCant == 4" ng-value="4">4</option>
+                        <option ng-selected="model.teCant == 5" ng-value="5">5</option>
+                        <option ng-selected="model.teCant == 6" ng-value="6">6</option>
+                        <option ng-selected="model.teCant == 7" ng-value="7">7</option>
+                        <option ng-selected="model.teCant == 8" ng-value="8">8</option>
+                        <option ng-selected="model.teCant == 9" ng-value="9">9</option>
+                        <option ng-selected="model.teCant == 10" ng-value="10">10</option>
+                        <option ng-selected="model.teCant == 11" ng-value="11">11</option>
+                        <option ng-selected="model.teCant == 12" ng-value="12">12</option>
+                    </select>
+                </label>
+                <label class="item item-icon-left item-toggle item-select">
+                    <i class="icon mbsc-ic mbsc-ic-material-chevron-right"></i> botella de agua
+                    <span class="mbsc-desc">envase de 355 ml.</span>
+                    <label class="toggle toggle-positive">
+                        <input type="checkbox" ng-model="agua" ng-change="model.agua = agua; SetConsumo();">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </label>
+                <label class="item item-input item-select" ng-hide="!model.agua">
+                    <div class="input-label">
+                        cantidad
+                    </div>
+                    <select ng-model="model.aguaCant" ng-change="SetConsumo()">
+                        <option ng-selected="model.aguaCant == 1" ng-value="1">1</option>
+                        <option ng-selected="model.aguaCant == 2" ng-value="2">2</option>
+                        <option ng-selected="model.aguaCant == 3" ng-value="3">3</option>
+                        <option ng-selected="model.aguaCant == 4" ng-value="4">4</option>
+                        <option ng-selected="model.aguaCant == 5" ng-value="5">5</option>
+                        <option ng-selected="model.aguaCant == 6" ng-value="6">6</option>
+                        <option ng-selected="model.aguaCant == 7" ng-value="7">7</option>
+                        <option ng-selected="model.aguaCant == 8" ng-value="8">8</option>
+                        <option ng-selected="model.aguaCant == 9" ng-value="9">9</option>
+                        <option ng-selected="model.aguaCant == 10" ng-value="10">10</option>
+                        <option ng-selected="model.aguaCant == 11" ng-value="11">11</option>
+                        <option ng-selected="model.aguaCant == 12" ng-value="12">12</option>
+                    </select>
+                </label>
+                <label class="item item-icon-left item-toggle item-select">
+                    <i class="icon mbsc-ic mbsc-ic-material-chevron-right"></i> coca-cola en lata
+                    <label class="toggle toggle-positive">
+                        <input type="checkbox" ng-model="coca" ng-change="model.coca = coca; SetConsumo();">
+                        <div class="track">
+                            <div class="handle"></div>
+                        </div>
+                    </label>
+                </label>
+                <label class="item item-input item-select" ng-hide="!model.coca">
+                    <div class="input-label">
+                        cantidad
+                    </div>
+                    <select ng-model="model.cocaCant" ng-change="SetConsumo()">
+                        <option ng-selected="model.cocaCant == 1" ng-value="1">1</option>
+                        <option ng-selected="model.cocaCant == 2" ng-value="2">2</option>
+                        <option ng-selected="model.cocaCant == 3" ng-value="3">3</option>
+                        <option ng-selected="model.cocaCant == 4" ng-value="4">4</option>
+                        <option ng-selected="model.cocaCant == 5" ng-value="5">5</option>
+                        <option ng-selected="model.cocaCant == 6" ng-value="6">6</option>
+                        <option ng-selected="model.cocaCant == 7" ng-value="7">7</option>
+                        <option ng-selected="model.cocaCant == 8" ng-value="8">8</option>
+                        <option ng-selected="model.cocaCant == 9" ng-value="9">9</option>
+                        <option ng-selected="model.cocaCant == 10" ng-value="10">10</option>
+                        <option ng-selected="model.cocaCant == 11" ng-value="11">11</option>
+                        <option ng-selected="model.cocaCant == 12" ng-value="12">12</option>
+                    </select>
+                </label>
+            </div>
+            </div>
+            <label class="item item-text" ng-hide="!model.active">
+                <div class="totalrow">
+                    <div class="subtotallabel">
+                        subtotal sala
+                    </div>
+                    <div class="subtotaltext">
+                        {{ subtotalDirecto | currency:"$":2 }}
+                    </div>
+                </div>
+                <div class="totalrow">
+                    <div class="subtotallabel">
+                        saldo disponible
+                    </div>
+                    <div class="subtotaltext">
+                        {{ saldo | currency:"$":2 }}
+                    </div>
+                </div>
+                <div class="totalrow">
+                    <div class="subtotallabel">
+                        a pagar por sala
+                    </div>
+                    <div class="subtotaltext">
+                        {{ subtotalSala | currency:"$":2 }}
+                    </div>
+                </div>
+                <br>
+                <div class="totalrow">
+                    <div class="subtotallabel">
+                        subtotal consumos
+                    </div>
+                    <div class="subtotaltext">
+                        {{ subtotalConsumos | currency:"$":2 }}
+                    </div>
+                </div>
+                <div class="totalrow">
+                    <div class="subtotallabel">
+                        iva
+                    </div>
+                    <div class="subtotaltext">
+                        {{ iva | currency:"$":2 }}
+                    </div>
+                </div>
+                <div class="linea"></div>
+                <div class="totalrow">
+                    <div class="subtotallabel">
+                        total
+                    </div>
+                    <div class="totaltext">
+                        {{ total | currency:"$":2 }}
+                    </div>
+                </div>
+            </label>
+            <button class=" button button-energized  button-block icon-right ion-android-alarm-clock " ng-click="VerifcarDisponibilidad()" ng-hide="!model.active">verificar disponibilidad</button>
+        </form>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,85 @@
+var _Consumos = [{
+    clave: 'COBR01',
+    precio: 0,
+    tipo: 'coffee',
+    cantidad: 0,
+    idProducto: 80
+}, {
+    clave: 'COBR02',
+    precio: 0,
+    tipo: 'coffee',
+    cantidad: 0,
+    idProducto: 80
+}, {
+    clave: 'COBR97',
+    precio: 100,
+    tipo: 'coffee',
+    cantidad: 0,
+    idProducto: 80
+}, {
+    clave: 'COBR98',
+    precio: 190,
+    tipo: 'coffee',
+    cantidad: 0,
+    idProducto: 81
+}, {
+    clave: 'COBR03',
+    precio: 0,
+    tipo: 'coffee',
+    cantidad: 0,
+    idProducto: 78
+}, {
+    clave: 'COBR04',
+    precio: 0,
+    tipo: 'coffee',
+    cantidad: 0,
+    idProducto: 78
+}, {
+    clave: 'COBR32',
+    precio: 65,
+    tipo: 'coffee',
+    cantidad: 0,
+    idProducto: 78
+}, {
+    clave: 'COBR92',
+    precio: 120,
+    tipo: 'coffee',
+    cantidad: 0,
+    idProducto: 79
+}, {
+    clave: 'CAFE33',
+    precio: 15,
+    tipo: 'americano',
+    cantidad: 0,
+    idProducto: 64
+}, {
+    clave: 'CLEX94',
+    precio: 25,
+    tipo: 'capuchino',
+    cantidad: 0,
+    idProducto: 73
+}, {
+    clave: 'CFENR110',
+    precio: 30,
+    tipo: 'nespresso',
+    cantidad: 0,
+    idProducto: 71
+}, {
+    clave: 'TEE120',
+    precio: 20,
+    tipo: 'te',
+    cantidad: 0,
+    idProducto: 178
+}, {
+    clave: 'BOAG51',
+    precio: 12,
+    tipo: 'agua',
+    cantidad: 0,
+    idProducto: 62
+}, {
+    clave: 'REFR97',
+    precio: 12,
+    tipo: 'coca',
+    cantidad: 0,
+    idProducto: 159
+}];

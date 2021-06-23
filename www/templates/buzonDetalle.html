@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="css/detail.css">
+<ion-view title="detalle" class=" ">
+    <ion-content padding="false" class="has-header">
+        <form class="list ">
+            <label class="item item-input">
+                <span class="input-label">de:</span>
+                <span class="detailText"> mensajes@zenttre.com </span>
+            </label>
+            <label class="item item-input " id="detalleDeMensaje-input23">
+                <span class="input-label">para:</span>
+                <span class="detailText">{{ model.mail.contactos}}</span>
+            </label>
+        </form>
+        <div class="dateMail padding">{{ model.mail.fechaEnvio + ' a las ' + model.mail.horaEnvio }}</div>  
+        <div class="item" ng-hide="model.mail.adjunto == ''">
+            <i class="icon ion-android-attach" style="font-size: 18px"></i> <a ng-click="AbrirAdjunto(model.mail.adjunto)">abrir archivo</a>
+        </div>
+        <p class="subjectMail padding">
+            <strong>{{ model.mail.asunto  }} </strong></p>
+        <div class="spacer" style="width: 320px; height: 26px;"></div>
+        <p style="color:#000000;" class="padding">
+            <div ng-bind-html="model.mailDetail" class="alignMail mailCuerpo"></div>
+        </p>
+        <br>
+
+    </ion-content>
+</ion-view>

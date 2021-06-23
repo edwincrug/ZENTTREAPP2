@@ -1,0 +1,1 @@
+appServices.factory("clientRepository",function(t,a){var e=a.globalAPI+"client/";return{obtenerDatos:function(a,n){var o=e+"obtenerdatos/";return t({url:o,method:"GET",params:{cliente:a,acta:n},headers:{"Content-Type":"application/json"}})},mailContacto:function(a){var n=e+"mailcontacto/";return t({url:n,method:"POST",data:a,headers:{"Content-Type":"application/json"}})}}});

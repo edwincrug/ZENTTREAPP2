@@ -1,0 +1,138 @@
+<link rel="stylesheet" href="css/map.css">
+<link rel="stylesheet" href="css/cleareable.css">
+<ion-view>
+    <ion-content overflow-scroll="true">
+        <label class="item item-text" id="title">
+            nuevo envío
+        </label>
+        <label class="item item-input" ng-hide="model.messagingObj != null">
+            <span class="input-label"><span class="icon-left mbsc-ic mbsc-ic-box-remove iconItemLeft"></span>material</span>
+            <input type="text" ng-model="model.material" placeholder="introduzca una descripción del paquete" />
+        </label>
+
+        <label class="item item-text" ng-hide="model.messagingObj == null">
+            <span class="input-label itemTextLabel"><span class="icon-left mbsc-ic mbsc-ic-box-remove iconItemLeft"></span>material</span>
+            <div class="itemText"> {{ model.material }}
+            </div>
+        </label>
+
+        <label class="item item-input ">
+            <span class="input-label"><span class="icon-left mbsc-ic mbsc-ic-user3 iconItemLeft"></span>destinatario</span>
+            <input type="text" ng-model="model.destinatario" placeholder="persona a quien se entrega" />
+        </label>
+        <div class="item item-text">
+            <div class="button-bar">
+                <a class="button icon-left ion-home button-calm " ng-click="SetTipo(1);" ng-class=" {'button-outline' : tipo == 2 }">Normal</a>
+                <a class="button icon-left ion-home button-calm" ng-click="SetTipo(2);" ng-class=" {'button-outline' : tipo == 1 }">Express</a>
+            </div>
+        </div>
+        <label class="item item-text">
+            <span class="input-label itemTextLabel"><span class="icon-left ion-calendar iconItemLeft"></span>fecha</span>
+            <div class="itemText"> {{ tipo == 2 ? 'dentro de las próximas 48 horas' : 'entrega de 2 a 5 días' }}
+            </div>
+        </label>
+        <!--
+        <label class="item item-input ">
+            <span class="input-label"><span class="icon-left ion-calendar iconItemLeft"></span>fecha</span>
+            <input type="text" class="fechaInput" ng-model="model.fecha" mobiscroll-calendar="settingsFecha" ng-change="SetFechaInicio()" />
+        </label>
+        <label class="item item-select">
+            <span class="input-label"><span class="icon-left ion-ios-alarm-outline iconItemLeft"></span>hora</span>
+            <select ng-model="selInicio" ng-change="SetHoraInicio(selInicio)">
+                <option>10:00</option>
+                <option>10:30</option>
+                <option>11:00</option>
+                <option>11:30</option>
+                <option>12:00</option>
+                <option>12:30</option>
+                <option>13:00</option>
+                <option>13:30</option>
+                <option>14:00</option>
+                <option>14:30</option>
+                <option>15:00</option>
+                <option>15:30</option>
+                <option>16:00</option>
+                <option>16:30</option>
+                <option>17:00</option>
+            </select>
+        </label>
+-->
+        <label class="item item-text">
+            <span class="input-label itemTextLabel"><span class="icon-left ion-play iconItemLeft "></span>desde</span>
+            <div class="itemText">Calle Aniceto Ortega 817, Col del Valle Centro, 03100 Ciudad de México, D.F.
+            </div>
+        </label>
+        <div class="item item-input item-button-right hastaItem">
+            <div class="hastaLabel"> <span class="input-label itemTextLabel"><span class="icon-left mbsc-ic mbsc-ic-foundation-stop iconItemLeft "></span>hasta</span>
+            </div>
+            <i class="icon ion-search placeholder-icon hastaLevel2"></i>
+            <input type="search" class="hastaLevel2 txtSearch" placeholder="dirección destino" ng-model="model.currentAddress">
+            <i class="clear-search icon ion-close-circled iconClear clearEnvio hastaLevel2" ng-click="ClearSearch()" ng-hide="model.currentAddress.length == 0"></i>
+            <!--            <button class="close-icon" type="reset"></button>-->
+            <button class="button button-energized" id="btnSearch" ng-click="GeocodeAddress()">
+                <i class="icon ion-ios-search"></i> &nbsp; buscar&nbsp;
+            </button>
+            <button class="button button-energized button-outline" ng-click="GetCurrentLocation()" id="btnPosition">
+                <i class="icon mbsc-ic mbsc-ic-material-my-location"></i>
+            </button>
+        </div>
+        <!--
+        <label class="item item-input">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="search" placeholder="dirección destino" ng-model="model.currentAddress" required class="search-box1">
+            <button class="close-icon1" type="reset"></button>
+        </label>
+-->
+        <div id="map" data-tap-disabled="true"></div>
+        <button class=" button button-energized  button-block button-outline icon-right ion-android-alarm-clock " ng-click="SetDistance()" ng-hide="entrega">fijar punto de entrega</button>
+        <label class="item item-text" ng-hide="!entrega">
+            <div class="distanciaRow">
+                <i class="clear-search icon mbsc-ic mbsc-ic-fa-bicycle iconDistancia"></i>
+                <div class="distanciaLabel">distancia: </div>
+                <div class="distanciaText">{{ model.distance }}</div>
+            </div>
+            <div class="distanciaRow">
+                <i class="clear-search icon mbsc-ic mbsc-ic-ion-ios7-timer-outline iconDistancia"></i>
+                <div class="distanciaLabel">tiempo: </div>
+                <div class="distanciaText">{{ model.duration }}</div>
+            </div>
+            <div class="linea"></div>
+            <div class="distanciaRow">
+                <i class="clear-search icon iconDistancia"></i>
+                <div class="distanciaLabel">costo: </div>
+                <div class="totalText">$ 80.00</div>
+            </div>
+        </label>
+        <button class=" button button-energized  button-block icon-right ion-android-alarm-clock " ng-click="ProcesarEnvio()" ng-hide="!entrega">procesar envío</button>
+        <button class=" button button-assertive  button-block icon-right ion-android-alarm-clock " ng-click="Cancelar()">cancelar</button>
+    </ion-content>
+</ion-view>
+
+<div ng-model="mywidget" mobiscroll-widget="settingsAlert" mobiscroll-instance="alertAddress" style="display: none; ">
+    <div class="md-body">
+        <h3>{{ model.alertTitle }}</h3>
+        <p>{{ model.alertText }}</p>
+    </div>
+</div>
+
+<script id="modal.html" type="text/ng-template">
+    <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-energized">
+            <h1 class="title">seleccione una dirección</h1>
+            <button class="button button-clear button-primary" ng-click="modal.hide()">cerrar</button>
+        </ion-header-bar>
+        <ion-content class="padding">
+            <div class="list">
+
+
+                <div class="item item-divider">
+                    resultados
+                </div>
+                <a class="item addressResult" ng-click="SetResult(result)" ng-repeat="result in model.resultados">
+                    {{ result.formatted_address }}
+                  </a>
+
+            </div>
+        </ion-content>
+    </ion-modal-view>
+</script>

@@ -1,0 +1,121 @@
+.detailText {
+    color: #a5a5a5 !important;
+    padding-top: 5px;
+    font-size: 15px !important
+}
+
+.iconItemLeft {
+    font-size: 24px !important;
+    margin-right: 10px !important
+}
+
+.marginLeft {
+    margin-left: 10px
+}
+
+.sliderAdjust {
+    padding-bottom: 18px !important;
+    padding-top: 12px !important
+}
+
+.salidaInput {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-top: 18px;
+    margin-right: 50px;
+    font-size: 18px
+}
+
+.entradaInput {
+    font-size: 18px !important;
+}
+
+.fechaInput {
+    text-align: right
+}
+
+#title {
+    font-size: 22px;
+    text-align: center
+}
+
+.subtotallabel {
+    width: 65%;
+    text-align: right;
+    display: inline-block;
+    font-weight: 300;
+    font-size: 16px
+}
+
+.subtotaltext {
+    display: inline-block;
+    width: 32%;
+    text-align: right;
+    font-size: 17px;
+    font-weight: 500
+}
+
+.totaltext {
+    display: inline-block;
+    width: 32%;
+    text-align: right;
+    font-size: 19px;
+    font-weight: 700;
+    margin-top: 10px
+}
+
+.linea {
+    border-bottom: 1px solid gray;
+    float: right;
+    width: 79%;
+    margin-top: 4px
+}
+
+.mailCuerpo {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.balanceMonto {
+    text-align: right;
+    margin-right: 10px;
+    font-size: 20px;
+    color: rgb(79, 181, 255) !important;
+}
+
+.profileIcon {
+    position: absolute;
+    left: 0;
+    margin-left: 30px;
+    font-size: 35px
+}
+
+.itemConsumo {
+    margin-left: 5px;
+}
+
+.mbsc-progress-value {
+    font-size: 16px !important;
+    color: rgb(79, 181, 255) !important;
+    margin-left: -17px !important;
+}
+
+.inprogress{
+     background-color: rgba(33, 142, 198, 0.08);
+}
+
+.token{
+    font-size: 28px !important;
+    color: rgba(47, 130, 217, 0.97) !important;
+    font-weight: 400;
+}
+
+.mapContainer{
+    padding: 10px;
+}
+
+.dateMail{
+    text-align: right !important;
+    margin-right: 10px !important;
+}

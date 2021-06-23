@@ -1,0 +1,9 @@
+.unread {
+    background-color: rgba(0, 0, 0, 0.04) !important;
+}
+
+.attachments{
+        position: absolute !important;
+    right: 0 !important;
+    margin-right: 20px !important;
+}
