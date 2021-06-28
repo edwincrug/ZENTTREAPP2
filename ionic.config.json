@@ -1,4 +1,6 @@
 {
   "name": "zenttreAPP",
-  "app_id": "51ae5231"
+  "integrations": {},
+  "type": "angular",
+  "id": "51ae5231"
 }
